@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300.0" minWidth="300.0" prefHeight="654.0" prefWidth="1047.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="654.0" prefWidth="1047.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="feedTab" closable="false" text="Feed">
+            <content>
+              <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1031.0">
+                     <children>
+                        <ListView fx:id="feedListView" layoutX="14.0" layoutY="58.0" prefHeight="501.0" prefWidth="1018.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="58.0" />
+                        <Button fx:id="feedClearButton" layoutX="941.0" layoutY="15.0" mnemonicParsing="false" onAction="#feedClearButtonClicked" text="Clear Feed" AnchorPane.rightAnchor="15.0" />
+                        <CheckBox fx:id="feedAutoRefreshCheckbox" layoutX="712.0" layoutY="20.0" mnemonicParsing="false" onAction="#feedAutoRefreshCheckboxChanged" text="Auto-refresh" AnchorPane.rightAnchor="227.0" />
+                        <Button fx:id="feedGoRefreshButton" layoutX="860.0" layoutY="15.0" mnemonicParsing="false" onAction="#feedGoRefreshButtonClicked" text="Go/Refresh" AnchorPane.rightAnchor="117.0" />
+                        <TextField fx:id="feedAddressTextField" layoutX="15.0" layoutY="15.0" prefHeight="29.0" prefWidth="236.0" promptText="Address or Location" />
+                        <TextField fx:id="feedRadiusTextField" layoutX="261.0" layoutY="15.0" prefHeight="29.0" prefWidth="98.0" promptText="Radius (km)" />
+                        <Label fx:id="feedUpdatedLabel" layoutX="643.0" layoutY="21.0" text="updated" textFill="#868686" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="historyTab" closable="false" text="History">
+               <content>
+                  <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1031.0">
+                     <children>
+                        <ListView fx:id="historyListView" layoutX="14.0" layoutY="58.0" prefHeight="501.0" prefWidth="1017.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="58.0" />
+                        <Button fx:id="historyGoButton" layoutX="932.0" layoutY="15.0" mnemonicParsing="false" onAction="#historyGoButtonClicked" prefHeight="29.0" prefWidth="100.0" text="Go" />
+                        <TextField fx:id="historyFromTextField" layoutX="541.0" layoutY="15.0" prefHeight="29.0" prefWidth="167.0" promptText="M/D/YYYY" />
+                        <Label layoutX="493.0" layoutY="21.0" text="From" />
+                        <Label layoutX="721.0" layoutY="21.0" text="To" />
+                        <TextField fx:id="historyToTextField" layoutX="748.0" layoutY="15.0" prefHeight="29.0" prefWidth="167.0" promptText="M/D/YYYY" />
+                        <TextField fx:id="historyAddressTextField" layoutX="15.0" layoutY="15.0" prefHeight="29.0" prefWidth="236.0" promptText="Address or Location" />
+                        <TextField fx:id="historyRadiusTextField" layoutX="261.0" layoutY="15.0" prefHeight="29.0" prefWidth="98.0" promptText="Radius (km)" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab fx:id="seismographTab" text="Graph">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <LineChart fx:id="seismoGraph" layoutX="14.0" layoutY="45.0" legendVisible="false" prefHeight="515.0" prefWidth="1019.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="45.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <TextField fx:id="seismoAddressTextField" layoutX="15.0" layoutY="15.0" prefHeight="29.0" prefWidth="236.0" promptText="Address or Location" />
+                        <TextField fx:id="seismoRadiusTextField" layoutX="261.0" layoutY="15.0" prefHeight="29.0" prefWidth="98.0" promptText="Radius (km)" />
+                        <Button fx:id="seismoGoButton" layoutX="932.0" layoutY="15.0" mnemonicParsing="false" onAction="#seismoGoButtonClicked" prefHeight="29.0" prefWidth="100.0" text="Go" />
+                        <TextField fx:id="seismoFromTextField" layoutX="541.0" layoutY="15.0" prefHeight="29.0" prefWidth="167.0" promptText="M/D/YYYY" />
+                        <Label layoutX="493.0" layoutY="21.0" text="From" />
+                        <Label layoutX="721.0" layoutY="21.0" text="To" />
+                        <TextField fx:id="seismoToTextField" layoutX="748.0" layoutY="15.0" prefHeight="29.0" prefWidth="167.0" promptText="M/D/YYYY" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

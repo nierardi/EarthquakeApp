@@ -1,0 +1,341 @@
+.root { 
+	-fx-focus-color: transparent; 
+	-fx-faint-focus-color: transparent;
+
+	/* ******* CONSTANTS ******* */
+	/* orange theme: #ff9616, #dd7900, #d8d8d8 */
+	/* blue theme: */
+	-fx-theme-color: #329cff;
+	-fx-theme-color-selected: #0069cc;
+	-fx-theme-color-inactive: #d8d8d8;
+
+}
+
+/* ================= TABS ================= */
+
+.tab {
+	-fx-background-color: white;
+	-fx-padding: 10 16 12 16;
+	-fx-border-width: 0;
+	-fx-cursor: hand;
+}
+.tab-header-background {
+	-fx-background-color: white;
+	-fx-border-width: 0 0 1 0;
+	-fx-border-color: -fx-theme-color;
+}
+.tab:selected {
+	-fx-background-color: white;
+	-fx-padding: 10 16 9 16;
+	-fx-border-width: 0 0 3 0;
+	-fx-border-color: -fx-theme-color;
+}
+.tab:selected > .tab-container .tab-label {
+	-fx-text-fill: -fx-theme-color;
+	-fx-font-weight: bold;
+}
+
+/* ================= BUTTONS ================= */
+
+.button {
+	-fx-border-radius: 3;
+	-fx-background-radius: 3;
+	-fx-background-color: white;
+	-fx-border-width: 1;
+	-fx-background-insets: 0;
+	-fx-border-color: -fx-theme-color;
+	-fx-text-fill: -fx-theme-color-selected;
+	-fx-cursor: hand;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.0, 0, 2);
+}
+.button:pressed {
+	-fx-border-radius: 3;
+	-fx-background-radius: 3;
+	-fx-background-color: -fx-theme-color-selected;
+	-fx-border-width: 1;
+	-fx-border-color: -fx-theme-color-selected;
+	-fx-text-fill: white;
+}
+.primary-button {
+	-fx-border-radius: 3;
+	-fx-background-radius: 3;
+	-fx-background-color: -fx-theme-color;
+	-fx-border-width: 1;
+	-fx-border-color: -fx-theme-color;
+	-fx-text-fill: white;
+}
+
+/* ================= BUTTON-LIKE THINGS ================= */
+
+.toggle-button,
+.check-box > .box,
+.choice-box,
+.color-picker.split-button > .color-picker-label,
+.combo-box-base,
+.combo-box-base:editable > .arrow-button {
+	-fx-border-radius: 3;
+	-fx-background-radius: 3;
+	-fx-background-color: white;
+	-fx-border-width: 1;
+	-fx-background-insets: 0;
+	-fx-border-color: -fx-theme-color;
+	-fx-text-fill: -fx-theme-color-selected;
+	-fx-cursor: hand;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.0, 0, 2);
+}
+
+.radio-button > .radio {
+	-fx-border-radius: 9;
+	-fx-background-color: white;
+	-fx-border-width: 1;
+	-fx-background-insets: 0;
+	-fx-border-color: -fx-theme-color;
+	-fx-cursor: hand;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.0, 0, 2);
+}
+.radio-button > .radio > .dot {
+	-fx-color: white;
+}
+.radio-button:selected > .radio {
+	-fx-background-color: -fx-theme-color;
+}
+.radio-button:selected > .radio > .dot {
+	-fx-color: transparent;
+	-fx-background-color: white;
+	-fx-background-insets: 1;
+}
+
+.toggle-button:armed {
+	-fx-border-radius: 3;
+	-fx-background-radius: 3;
+	-fx-background-color: -fx-theme-color;
+	-fx-border-width: 1;
+	-fx-border-color: -fx-theme-color;
+	-fx-text-fill: white;
+}
+
+/*.check-box:selected > .box > .dot {
+	-fx-color: white;
+}*/
+.check-box:selected > .box {
+	-fx-background-color: -fx-theme-color;
+}
+.check-box:selected > .box > .mark {
+	-fx-color: transparent;
+	-fx-background-color: white;
+	-fx-background-insets: 1;
+}
+
+/* ================= COMBO BOX/SPINNER ================= */
+
+/*
+.choice-box:focused,
+.combo-box-base:focused {
+	-fx-border-radius: 3;
+	-fx-background-radius: 3;
+	-fx-background-color: -fx-theme-color-selected;
+	-fx-border-width: 1;
+	-fx-border-color: -fx-theme-color-selected;
+	-fx-text-fill: white;
+}*/
+.combo-box-base > .list-cell:selected {
+	-fx-text-fill: -fx-theme-color-selected;
+}
+.arrow-button > .arrow,
+.increment-arrow,
+.decrement-arrow {
+	-fx-background-color: -fx-theme-color-selected;
+}
+
+.spinner > .text-field {
+	-fx-border-radius: 3 0 0 3;
+	-fx-background-radius: 3 0 0 3;
+	-fx-background-color: white;
+	-fx-border-width: 1 0 1 1;
+}
+
+.spinner > .text-field:focused {
+	-fx-border-radius: 3 0 0 3;
+	-fx-background-radius: 3 0 0 3;
+	-fx-background-color: white;
+	-fx-border-width: 1 0 1 1;
+}
+
+.increment-arrow-button {
+	-fx-border-radius: 0 3 0 0;
+	-fx-background-radius: 3;
+	-fx-background-color: white;
+	-fx-border-width: 1 1 0 1;
+	-fx-border-color: -fx-theme-color;
+	-fx-text-fill: -fx-theme-color-selected;
+	-fx-cursor: hand;
+}
+
+.decrement-arrow-button {
+	-fx-margin-top: 0;
+	-fx-border-radius: 0 0 3 0;
+	-fx-background-radius: 3;
+	-fx-background-color: white;
+	-fx-border-width: 1 1 1 1;
+	-fx-border-color: -fx-theme-color;
+	-fx-text-fill: -fx-theme-color-selected;
+	-fx-cursor: hand;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.0, 0, 2);
+}
+
+/* ================= SLIDER ================= */
+
+.slider .thumb {
+	-fx-background-color: -fx-theme-color;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.0, 0, 2);
+}
+.slider:pressed .thumb {
+	-fx-background-color: -fx-theme-color-selected;
+}
+.slider .track {
+	-fx-background-color: -fx-theme-color-inactive;
+	-fx-background-radius: 4;
+	-fx-border-width: 0;
+	-fx-border-radius: 4;
+	-fx-padding: 1;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.0, 0, 1);
+}
+.slider:vertical .track {
+	-fx-background-color: -fx-theme-color-inactive;
+	-fx-background-radius: 4;
+	-fx-border-width: 0;
+	-fx-border-radius: 4;
+	-fx-padding: 1.5;	/* not sure why this is necessary */
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.0, 0, 1);
+}
+
+/* ================= TEXT AREAS ================= */
+
+.text-field,
+.text-area {
+	-fx-border-radius: 3;
+	-fx-background-radius: 3;
+	-fx-background-color: white;
+	-fx-border-width: 1;
+	-fx-border-color: -fx-theme-color-inactive;
+	-fx-background-insets: 0;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.0, 0, 2);
+}
+
+.text-field:focused,
+.text-area:focused {
+	-fx-border-radius: 3;
+	-fx-background-radius: 3;
+	-fx-background-color: white;
+	-fx-border-width: 1;
+	-fx-border-color: -fx-theme-color;
+}
+
+/* ================= VIEWS ================= */
+
+.scroll-pane,
+.split-pane,
+.list-view,
+.tree-view,
+.table-view,
+.tree-table-view,
+.html-editor {
+    -fx-background-color: white;
+    -fx-border-radius: 1;
+    -fx-border-color: -fx-theme-color-inactive;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.0, 0, 2);
+}
+
+.titled-pane, .list-view {
+	-fx-border-width: 1;
+	-fx-border-color: -fx-theme-color-inactive;
+	-fx-border-radius: 3;
+	-fx-background-radius: 3;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.0, 0, 2);
+}
+.titled-pane {
+	-fx-padding: -1;
+}
+.titled-pane > *.content {
+	-fx-background-radius: 3;
+	-fx-border-radius: 3;
+}
+
+.split-pane {
+	-fx-background-radius: 3;
+	-fx-border-radius: 3;
+	-fx-border-color: -fx-theme-color-inactive;
+}
+.split-pane > .split-pane-divider {
+	-fx-padding: 2;
+	-fx-border-width: 0;
+	-fx-background-insets: 0;
+	-fx-background-color: -fx-theme-color-inactive;
+}
+.split-pane > .split-pane-divider:pressed {
+	-fx-background-color: -fx-theme-color-selected;
+}
+
+/* ================= SCROLL BARS ================= */
+
+.scroll-bar {
+	-fx-background-color: white;
+	-fx-background-insets: 0;
+}
+.scroll-bar:vertical > .thumb {
+	-fx-background-color: -fx-theme-color;
+	-fx-background-insets: 2 4 2 5;
+	-fx-background-radius: 15;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.0, 0, 1);
+}
+.scroll-bar:horizontal > .thumb {
+	-fx-background-color: -fx-theme-color;
+	-fx-background-insets: 5 2 4 2;
+	-fx-background-radius: 15;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.0, 0, 1);
+}
+.scroll-bar > .thumb:pressed {
+	-fx-background-color: -fx-theme-color-selected;
+}
+.scroll-bar > .increment-button,
+.scroll-bar > .decrement-button {
+    -fx-background-color: white;
+    -fx-color: transparent;
+    -fx-padding: 0.25em; /* 3px */
+}
+.scroll-bar:horizontal > .increment-button,
+.scroll-bar:horizontal > .decrement-button {
+    -fx-padding: 3 -1 3 -1;
+    -fx-background-color: transparent;
+}
+.scroll-bar:vertical > .increment-button,
+.scroll-bar:vertical > .decrement-button {
+    -fx-padding: -1 3 -1 3;
+    -fx-color: transparent;
+}
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+	-fx-color: transparent;
+	-fx-background-color: transparent;
+}
+
+.scroll-pane > .corner {
+	-fx-background-color: white;
+}
+.scroll-pane {
+	-fx-background-radius: 3;
+	-fx-border-radius: 3;
+	-fx-border-color: -fx-theme-color-inactive;
+}
+.scroll-bar:vertical {
+	-fx-background-radius: 0 3 3 0;
+}
+.scroll-bar:horizontal {
+	-fx-background-radius: 0 0 3 3;
+}
+
+/* ================= SPLIT PANES ================= */
+
+.
