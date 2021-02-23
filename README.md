@@ -8,6 +8,8 @@ This utilizes the USGS web API to pull earthquake data, as well as the LocationI
 
 This Java project was built with the IntelliJ IDE but all that is needed to build/run the java files is `javac` - simply compile the `.java` files and then run `Main`.
 
-### Screenshot
+### Screenshots
 
-![](screenshot.png)
+![](screenshot1.png)
+
+![](screenshot2.png)
